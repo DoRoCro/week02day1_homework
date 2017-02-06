@@ -35,11 +35,18 @@ class Library
   end
 
   def add_book(book_name)
-    @books << { title: book_name, 
-        rental_details: { 
-          student_name: "", 
-          date: ""}
-        }
+    @books << { 
+                title: book_name, 
+                rental_details: { 
+                  student_name: "", 
+                  date: ""}
+              }
+  end
+
+  def new_rental(book_name, student, return_date)
+    book = details_all(book_name)
+    book[:rental_details][:student_name] = student
+    book[:rental_details][:date] = return_date
   end
 
 end

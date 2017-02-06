@@ -67,8 +67,22 @@ class TestExtension <  Minitest::Test
     a_library.books.push(@book1, @book2, @book3)
     a_library.add_book("flash_boys")
     assert_equal("flash_boys", a_library.books[3][:title])
-
   end
 
+  def test_new_rental_for_book
+    a_library = Library.new
+    a_library.books.push(@book1, @book2, @book3)
+    a_library.new_rental("the_hobbit", "Erik", "28/02/17")
+    assert_equal({
+                  title: "the_hobbit", 
+                  rental_details: { 
+                    student_name: "Erik",
+                    date: "28/02/17" 
+                    }
+                  },
+                    a_library.details_all("the_hobbit")
+                )
+
+  end
 
 end
