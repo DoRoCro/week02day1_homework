@@ -7,4 +7,8 @@ class Student
     @cohort = cohort
   end
 
+  def say_my_name
+    return "My name is " + @name
+  end
+
 end
