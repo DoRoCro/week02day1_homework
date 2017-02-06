@@ -13,4 +13,15 @@ class Library
     @books = []
   end
 
+  def list_all
+    i = 0
+    for book in @books
+      puts "Title: #{book[:title]},"
+      puts " on loan to: #{book[:rental_details][:student_name]} until #{book[:rental_details][:date]}"
+      i += 1
+    end
+  return i
+  end
+
+
 end

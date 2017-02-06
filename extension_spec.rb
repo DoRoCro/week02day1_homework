@@ -40,5 +40,12 @@ class TestExtension <  Minitest::Test
     assert_equal(@book1, a_library.books[0])
   end
 
+  def test_list_all_book_details
+    a_library = Library.new
+    a_library.books << @book1
+    a_library.books << @book2
+    a_library.books << @book3
+    assert_equal(3 , a_library.list_all)
+  end
 
 end
