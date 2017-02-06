@@ -20,7 +20,12 @@ class TestPartA <  Minitest::Test
 
   def test_student_say_my_name
     student = Student.new("Carol", 10)
-    assert_equal("My name is Carol",student.say_my_name)
+    assert_equal("My name is Carol",student.talks('My name is ' + student.name ))
+  end
+
+  def test_favourite_language
+    student = Student.new("Eric", 10)
+    assert_equal("I love Ruby!", student.favourite_language("Ruby"))
   end
 
 end

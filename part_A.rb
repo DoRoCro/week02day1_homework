@@ -7,8 +7,11 @@ class Student
     @cohort = cohort
   end
 
-  def say_my_name
-    return "My name is " + @name
+  def talks(phrase)
+    return phrase 
   end
 
+  def favourite_language(lang)
+    return talks("I love " + lang + "!")
+  end
 end
