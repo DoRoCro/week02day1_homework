@@ -23,5 +23,11 @@ class Library
   return i
   end
 
+  def details_all(book_name)
+    for x in @books
+      return x if (x[:title] == book_name)
+    end
+    return
+  end
 
 end
