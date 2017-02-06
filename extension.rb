@@ -1,6 +1,6 @@
 class Library
 
-# Library = [ book1, book2, book3,...] 
+  # Library = [ book1, book2, book3,...] 
   # a_book = { 
   #     title: "lord_of_the_rings",
   #     rental_details: { 
@@ -8,6 +8,7 @@ class Library
   #      date: "01/12/16"
   #     }
   #   }
+
   attr_accessor :books
   def initialize   #create new empty Library 
     @books = []
@@ -20,7 +21,7 @@ class Library
       puts " on loan to: #{book[:rental_details][:student_name]} until #{book[:rental_details][:date]}"
       i += 1
     end
-  return i
+    return i
   end
 
   def details_all(book_name)
