@@ -19,6 +19,8 @@ class TestExtension <  Minitest::Test
         date: "01/12/16"
       }
     }
+    a_library = Library.new
+    assert_equal( [], a_library.books)
 
   end
 
