@@ -34,4 +34,12 @@ class Library
     return details_all(book_name)[:rental_details]
   end
 
+  def add_book(book_name)
+    @books << { title: book_name, 
+        rental_details: { 
+          student_name: "", 
+          date: ""}
+        }
+  end
+
 end
