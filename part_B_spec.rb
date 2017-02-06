@@ -39,4 +39,10 @@ class TestPartB <  Minitest::Test
     assert_equal( true, a_team.player_found?('charlie'))
   end
 
+  def test_player_in_team__not_found
+    # could combine this with test above ...
+    a_team = setup_basic_team
+    assert_equal( false, a_team.player_found?('Mark'))
+  end
+
 end
