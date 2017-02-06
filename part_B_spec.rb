@@ -4,6 +4,7 @@ require_relative('./part_B')
 
 class TestPartB <  Minitest::Test
 
+  
   def test_team_new
     team_name = "Crystal Palace"
     team_players = [ 'alpha', 'bravo', 'charlie']
@@ -14,22 +15,27 @@ class TestPartB <  Minitest::Test
     assert_equal(team_coach, a_team.coach)
   end
 
-  def test_coach_sacked
+  def setup_basic_team
     team_name = "Crystal Palace"
     team_players = [ 'alpha', 'bravo', 'charlie']
     team_coach = "Delta"
-    a_team = Team.new(team_name, team_players, team_coach)
+    return Team.new(team_name, team_players, team_coach)
+  end
+
+  def test_coach_sacked
+    a_team = setup_basic_team
     a_team.coach ="Allardyce"
     assert_equal("Allardyce", a_team.coach)
   end
 
   def test_new_player_added
-    team_name = "Crystal Palace"
-    team_players = [ 'alpha', 'bravo', 'charlie']
-    team_coach = "Delta"
-    a_team = Team.new(team_name, team_players, team_coach)
+    a_team = setup_basic_team
     a_team.add_player("Mark")
     assert_equal([ 'alpha', 'bravo', 'charlie', 'Mark'], a_team.players)
+  end
+
+  def test_player_in_team
+    setup_basic_team
   end
 
 end
