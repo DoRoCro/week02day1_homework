@@ -21,6 +21,15 @@ class TestPartB <  Minitest::Test
     a_team = Team.new(team_name, team_players, team_coach)
     a_team.coach ="Allardyce"
     assert_equal("Allardyce", a_team.coach)
-    
   end
+
+  def test_new_player_added
+    team_name = "Crystal Palace"
+    team_players = [ 'alpha', 'bravo', 'charlie']
+    team_coach = "Delta"
+    a_team = Team.new(team_name, team_players, team_coach)
+    a_team.add_player("Mark")
+    assert_equal([ 'alpha', 'bravo', 'charlie', 'Mark'], a_team.players)
+  end
+
 end

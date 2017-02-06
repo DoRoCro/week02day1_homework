@@ -7,4 +7,8 @@ class Team
     @coach = coach
   end
 
+  def add_player(player_name)
+    @players << player_name
+  end
+
 end
