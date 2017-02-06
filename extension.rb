@@ -30,4 +30,8 @@ class Library
     return
   end
 
+  def details_rental(book_name)
+    return details_all(book_name)[:rental_details]
+  end
+
 end

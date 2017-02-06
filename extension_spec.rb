@@ -53,6 +53,12 @@ class TestExtension <  Minitest::Test
     a_library.books.push(@book1, @book2, @book3)
     result = a_library.details_all("the_hobbit")
     assert_equal(@book2, result)
-
   end 
+
+  def test_list_rental_given_name
+    a_library = Library.new
+    a_library.books.push(@book1, @book2, @book3)
+    result = a_library.details_rental("lord_of_the_rings")
+    assert_equal(@book1[:rental_details], result)    
+  end
 end
