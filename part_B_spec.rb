@@ -13,6 +13,7 @@ class TestPartB <  Minitest::Test
     assert_equal("Crystal Palace", a_team.name)
     assert_equal( team_players, a_team.players)
     assert_equal(team_coach, a_team.coach)
+    assert_equal(0, a_team.points)
   end
 
   def setup_basic_team
