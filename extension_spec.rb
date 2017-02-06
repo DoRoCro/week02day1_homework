@@ -32,7 +32,12 @@ class TestExtension <  Minitest::Test
   def test_new_library
     a_library = Library.new
     assert_equal( [], a_library.books)
+  end
 
+  def test_add_book_to_empty_library
+    a_library = Library.new
+    a_library.books << @book1
+    assert_equal(@book1, a_library.books[0])
   end
 
 

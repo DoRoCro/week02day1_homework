@@ -9,7 +9,7 @@ class Library
   #     }
   #   }
   attr_accessor :books
-  def initialize   #create new empty Library with name = new_name
+  def initialize   #create new empty Library 
     @books = []
   end
 
