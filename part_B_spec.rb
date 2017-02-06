@@ -34,8 +34,9 @@ class TestPartB <  Minitest::Test
     assert_equal([ 'alpha', 'bravo', 'charlie', 'Mark'], a_team.players)
   end
 
-  def test_player_in_team
-    setup_basic_team
+  def test_player_in_team__found
+    a_team = setup_basic_team
+    assert_equal( true, a_team.player_found?('charlie'))
   end
 
 end
