@@ -1,4 +1,5 @@
 class Team
+  # using football rules for points
   attr_accessor :name, :players, :coach, :points
 
   def initialize(team_name, players, coach)
@@ -16,4 +17,16 @@ class Team
     return @players.include?(player_name)
   end
 
+  def add_result(result)
+    case result
+    when "win"
+      @points += 3
+    when "lose"
+      @points
+    when "draw"
+      @points += 1
+    else
+      return  
+    end
+  end
 end

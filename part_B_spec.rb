@@ -46,4 +46,10 @@ class TestPartB <  Minitest::Test
     assert_equal( false, a_team.player_found?('Mark'))
   end
 
+  def test_points_update__win
+    a_team = setup_basic_team
+    assert_equal( 3, a_team.add_result("win"))
+    assert_equal( 3, a_team.add_result("lose"))
+  end
+
 end
