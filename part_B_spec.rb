@@ -9,8 +9,12 @@ class TestPartB <  Minitest::Test
     team_players = [ 'alpha', 'bravo', 'charlie']
     team_coach = "Delta"
     a_team = Team.new(team_name, team_players, team_coach)
-    assert_equal("Crystal Palace", a_team.name)
-    assert_equal( team_players, a_team.players)
-    assert_equal(team_coach, a_team.coach)
+    assert_equal("Crystal Palace", a_team.get_name)
+    assert_equal( team_players, a_team.get_players)
+    assert_equal(team_coach, a_team.get_coach)
+  end
+
+  def test_coach_sacked
+
   end
 end
