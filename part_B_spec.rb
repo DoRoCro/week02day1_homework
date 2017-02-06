@@ -19,7 +19,7 @@ class TestPartB <  Minitest::Test
     team_players = [ 'alpha', 'bravo', 'charlie']
     team_coach = "Delta"
     a_team = Team.new(team_name, team_players, team_coach)
-    a_team.set_coach("Allardyce")
+    a_team.coach ="Allardyce"
     assert_equal("Allardyce", a_team.coach)
     
   end
